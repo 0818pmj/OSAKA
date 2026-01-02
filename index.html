@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>레전드 오사카 계획</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Pretendard, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f5f6f8;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    /* ===== 전체 레이아웃 ===== */
+    .planner {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .day {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .day-title {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    /* ===== 일정 카드 ===== */
+    .schedule {
+      background: #eef1f5;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .schedule:hover {
+      background: #e3e7ec;
+    }
+
+    .schedule-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .schedule-time {
+      font-size: 13px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .detail {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .schedule.active .detail {
+      max-height: 300px;
+    }
+
+    /* ===== 반응형 ===== */
+    @media (max-width: 1200px) {
+      .planner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .planner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .detail-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        display: block;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌸 개병신 4인조의 오사카 여행 🌸</h1>
+
+<div class="planner">
+
+  <!-- ================= DAY 1 ================= -->
+  <div class="day">
+    <div class="day-title">Day 1 - 난바 부근</div>
+
+    <div class="schedule">
+      <div class="schedule-title">간사이 공항 도착</div>
+      <div class="schedule-time">10:05</div>
+      <div class="detail">입국 심사 및 수하물 수령</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">라피트 열차 탑승</div>
+      <div class="schedule-time">10:30</div>
+      <div class="detail">난카이 라피트 → 난바 이동 40분 정도 걸림</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">난바역 도착</div>
+      <div class="schedule-time">11:10</div>
+      <div class="detail">숙소 방향 이동</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">숙소 짐 맡기기</div>
+      <div class="schedule-time">11:30</div>
+      <div class="detail">체크인 전 짐 보관</div>
+    </div>
+
+    <div class="schedule">
+    <div class="schedule-title">와카사역 난카이 난바점</div>
+        <div class="schedule-time">11:40 - 12:00</div>
+
+        <div class="detail">
+        <img class="detail-img"
+            src="https://mblogthumb-phinf.pstatic.net/MjAyMzAzMTVfMjgx/MDAxNjc4ODc3ODg5ODUx.4obFLABIcCjuTBsioJZeJq2KgdJJJL2YPqgvJgvD5_Ug.x78vMnZC-PU-dy3faGLmvCYrt2BCqTFxnXZ3NNoSslYg.JPEG.thezan/%EC%98%A4%EC%82%AC%EC%B9%B4%EB%82%9C%EB%B0%94%EB%A7%9B%EC%A7%91_016.jpg?type=w800"
+            alt="와카사야 정식"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        카이센동이 좃나 맛있음, 해산물 못처묵는 뱅욱이를 위한 닭고기덮밥도 있음 
+  </div>
+    </div>
+
+
+    <div class="schedule">
+      <div class="schedule-title">구로몬 시장</div>
+      <div class="schedule-time">12:05 - 14:00</div>
+      <div class="detail">
+        <img class="detail-img"
+         src="https://pic.k-cdn.media/2019/06/DSC00756-720x480.jpg"
+         alt="구로몬 시장"
+         loading="lazy"
+         referrerpolicy="no-referrer">
+         시장 구경 및 군것질 하는데 솔직히 이 시장 존나 창렬이라 싼 거 몇개만 사먹는 느낌으로 ㄱㄱ</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">덴덴타운</div>
+      <div class="schedule-time">14:10 - 15:30</div>
+      <div class="detail">
+        <img class="detail-img"
+         src="https://place.matcha-jp.com/resize/1280x2000/2022/09/13-11-39-52-8a1c544b336733f21058f9b71eecd8c2.webp"
+         alt="덴덴타운"
+         loading="lazy"
+         referrerpolicy="no-referrer">
+         전자상가랑 씹덕가게 있는 데인데 구경 ㄱㄱ </br>
+         인형뽑기 ㄱㄱ하던가</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">난바 야사카 신사</div>
+      <div class="schedule-time">15:45 - 16:15</div>
+      <div class="detail">
+        <img class="detail-img"
+         src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/20/00/a2000177/img/basic/a2000177_main.jpg"
+         alt="사자신사"
+         loading="lazy"
+         referrerpolicy="no-referrer">사자 신사 구경</div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">숙소 휴식</div>
+      <div class="schedule-time">16:25 - 18:30</div>
+      <div class="detail">약 2시간 휴식</div>
+    </div>
+
+    <div class="schedule">
+    <div class="schedule-title">규카츠 모토무라</div>
+    <div class="schedule-time">18:30 - 19:30</div>
+
+    <div class="detail">
+        <img class="detail-img"
+             src="https://cdn.imweb.me/upload/S201612185855798c0088d/5c9dc98cb8668.jpg"
+             alt="규카츠 모토무라"
+             loading="lazy"
+             referrerpolicy="no-referrer">
+
+        레전드 규카츠집 근데 존나 레전드적이라 웨이팅 30분 정도 있는데 견뎌 싸발
+    </div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">호젠지</div>
+      <div class="schedule-time">19:30 - 20:00</div>
+      <div class="detail">
+        <img class="detail-img"
+             src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/5428b7d8-97d2-44c9-b076-d0482868ceb3.jpeg"
+             alt="호젠지"
+             loading="lazy"
+             referrerpolicy="no-referrer">
+        호젠지 & 요코초 구경 존나 고려시대 감성
+    </div>
+    </div>
+
+    <div class="schedule">
+      <div class="schedule-title">자유 일정</div>
+      <div class="schedule-time">20:10 이후</div>
+      <div class="detail">숙소 복귀 후 마트 가거나 편의점 ㄱㄱ</div>
+    </div>
+  </div>
+
+<!-- ================= DAY 2 ================= -->
+<div class="day">
+  <div class="day-title">Day 2 - 덴노지 부근</div>
+
+  <div class="schedule">
+    <div class="schedule-title">기상</div>
+    <div class="schedule-time">10:00</div>
+    <div class="detail">빠딲빠딲 인나자잉</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">준비 완료</div>
+    <div class="schedule-time">11:00</div>
+    <div class="detail">빠딲빠딲 준비하자</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">숙소 → 덴노지 공원 이동</div>
+    <div class="schedule-time">11:30</div>
+    <div class="detail">난바역 → 도부쓰엔마에역 이동</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">덴노지 공원</div>
+    <div class="schedule-time">11:30 - 13:00</div>
+
+    <div class="detail">
+      <img class="detail-img"
+          src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/73b9a5c3-ed05-4f28-b352-e3c3e0083256.jpeg"
+          alt="덴노지 공원"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      느긋하이 공원 구경 ㄱㄱ
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">아베톤 점심</div>
+    <div class="schedule-time">13:10 - 14:00</div>
+    <div class="detail">
+      <img class="detail-img"
+          src="https://tblg.k-img.com/restaurant/images/Rvw/307691/640x640_rect_ff621ea88d955588e8a2d46e528dd8cc.jpg"
+          alt="아베톤"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      레전드 철판 야끼소바/오꼬노미야끼 (웨이팅 있을수도)
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">하루카스 전망대</div>
+    <div class="schedule-time">14:10 - 15:40</div>
+    <div class="detail">
+      <img class="detail-img"
+          src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/dbf76d6a-3a30-4583-98a6-723056d793fe"
+          alt="하루카스"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      하루카스 전망대에서 오사카 시내 구경
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">덴노지 동물원</div>
+    <div class="schedule-time">16:00 - 17:30</div>
+    <div class="detail">
+      <img class="detail-img"
+          src="https://i0.wp.com/osaka-yanen.com/wp-content/uploads/zoo02.jpg?resize=720%2C540&ssl=1"
+          alt="동물원"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      동물원 가서 구경 (입장료 500엔)
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">신세카이 · 쓰텐카쿠</div>
+    <div class="schedule-time">17:40 - 18:30</div>
+    <div class="detail">
+      <img class="detail-img"
+          src="https://www.howto-osaka.com/kr/wp/wp-content/uploads/2023/09/tsutenkaku-1.jpg"
+          alt="쓰텐카쿠"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      신세카이 시내/쓰텐카쿠 구경
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">야키니쿠 리키마루 (도톤보리)</div>
+    <div class="schedule-time">19:00 - 20:30</div>
+    <div class="detail">
+      <img class="detail-img"
+          src="https://i.autoreserve.com/thumb/800x800/restaurant_image/image/054/018/870/54018870/d4fee870-2c5f-44b1-9f17-424acddd92df.jpeg?format=webp"
+          alt="야키니쿠"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      야키니쿠 무한리필 집 (인당 5000엔 정도/웨이팅 30분 정도 소요)
+    </div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">숙소 복귀</div>
+    <div class="schedule-time">20:45</div>
+    <div class="detail">
+      자유 시간
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= DAY 3 ================= -->
+<div class="day">
+  <div class="day-title">Day 3 - 교토</div>
+
+  <div class="schedule active" style="cursor: default;">
+    <div class="schedule-title">교토 ㄱㄱ</div>
+    <div class="schedule-time"></div>
+
+    <div class="detail" style="max-height: none;">
+      <img class="detail-img"
+           src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVBJUI1JTkwJUVEJTg2JUEwJTIwJUVBJUIxJUIwJUVCJUE2JUFDfGVufDB8fDB8fHww"
+           alt="교토1"
+           loading="lazy"
+           referrerpolicy="no-referrer">
+      <img class="detail-img"
+           src="https://img.cooljapan-videos.com/files/member_posts/image/d7045b340691d80f664c8fa6bb33d1d1e8934b77.jpg"
+           alt="교토2"
+           loading="lazy"
+           referrerpolicy="no-referrer">
+
+      <div style="text-align:center; color:#666; font-size:14px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ================= DAY 4 ================= -->
+<!-- ================= DAY 4 ================= -->
+<div class="day">
+  <div class="day-title">Day 4 - 오사카성/우메다</div>
+
+  <div class="schedule">
+    <div class="schedule-title">기상</div>
+    <div class="schedule-time">10:00</div>
+    <div class="detail">느긋하게 기상</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">준비 완료</div>
+    <div class="schedule-time">11:00</div>
+    <div class="detail">외출 준비</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">숙소 → 오사카성 이동</div>
+    <div class="schedule-time">11:50</div>
+    <div class="detail">지하철 이동</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">오사카성 구경</div>
+    <div class="schedule-time">11:50 - 13:00</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://i.namu.wiki/i/vPbwpcD_RWsiYHNSB4o9ddtyxIYAPDQoFZd5uQtcFQo8-AYMJcGtrdK47K1S3WQhJgVXJkZFL5D1RB99w9de4A.webp"
+       alt="오사카성"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+
+  천수관 구경 + 산책<br>
+  500엔 주고 셔틀뻐스 탈 수 있음
+</div>
+
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">요루노 히토츠부 점심</div>
+    <div class="schedule-time">13:30 - 14:30</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://tblg.k-img.com/resize/640x360c/restaurant/images/Rvw/292794/930eb11aa6a79e6e1aa25c2a5a5ecfa4.jpg?token=960e6ba&api=v2"
+       alt="오니기리"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+
+  오니기리 무한리필 맛집
+</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">그랜드 프론트 오사카</div>
+    <div class="schedule-time">14:40 - 15:30</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/29/21/89/caption.jpg?w=900&h=500&s=1"
+       alt="그프오"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+
+  쇼핑 · 카페 · 구경<br>존나 큰 전자매장 느낌임
+</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">햅 파이브</div>
+    <div class="schedule-time">15:40 - 16:00</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_2048,w_2048/9924ec00-4c0f-412d-a73c-c4f22251184b.jpeg"
+       alt="햅파이브"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+  관람차 외관 + 주변 구경
+</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">우메다 지하상가</div>
+    <div class="schedule-time">16:00 - 18:30</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/20/00/a2000379/img/basic/a2000379_main.jpg"
+       alt="지하상가"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+
+  백화점 4~5개 연결 되어 있는 지하상가<br>구경하면서 쇼핑 ㄱㄱ
+</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">笑作酒場 せ〜坊 저녁</div> 
+    <div class="schedule-time">18:40 - 19:30</div>
+    <div class="detail">
+      <img class="detail-img"
+       src="https://tblg.k-img.com/resize/640x360c/restaurant/images/Rvw/222812/eb4adb6efbe3670f4bb3c9367c7118f2.jpg?token=a8312a2&api=v2"
+       alt="지하상가"
+       loading="lazy"
+       referrerpolicy="no-referrer">
+
+  레전드 맛집 이자카야 하이볼 한잔하믄서 저녁 ㄱㄱ
+</div>
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-title">숙소 복귀</div>
+    <div class="schedule-time">20:00</div>
+    <div class="detail">
+      휴식
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= DAY 5 ================= -->
+<div class="day">
+  <div class="day-title">Day 5 - 자유여행</div>
+
+  <div class="schedule active" style="cursor: default;">
+    <div class="schedule-title">자유 일정</div>
+    <div class="schedule-time"></div>
+
+    <div class="detail" style="max-height: none;">
+      <img class="detail-img"
+           src="https://i.namu.wiki/i/d_1QwaDm2DKjRAgapxuGlHOfe9RBTDfJoiWVk_Mf0AM9zL7ev4UChDOTANTMTUz-pRD0J6vU9MLFSt4g55MP2A.webp"
+           alt="글리코상"
+           loading="lazy"
+           referrerpolicy="no-referrer">
+
+      <img class="detail-img"
+           src="https://pic.k-cdn.media/2021/05/20210521-night-view-spot-main.jpg"
+           alt="일본 야경"
+           loading="lazy"
+           referrerpolicy="no-referrer">
+
+      <div style="
+        text-align:center;
+        color:#666;
+        font-size:14px;
+        margin-top:6px;
+      ">
+        레전드 자유여행 ㄱㄱ
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.schedule').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
